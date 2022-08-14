@@ -17,3 +17,11 @@ let purple = document.getElementById("purple");
 purple.onclick = function() {
     document.body.style.backgroundColor = "purple";
 };
+
+// Most useful way
+let pink = document.getElementById("pink");
+pink.addEventListener("click", makePink);
+
+function makePink() {
+    document.body.style.backgroundColor = "pink";
+}

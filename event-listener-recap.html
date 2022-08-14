@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Event Listener</title>
+</head>
+
+<body>
+    <h1>Now we will show final Event Handaler</h1>
+    <button id="btn-one">Change Above Text</button>
+    <button id="btn-two" onclick="backgroundChange()">
+      Change The Text Background
+    </button>
+
+    <br />
+    <h1 id="text">Default Text</h1>
+    <input type="text" />
+    <button id="update-btn">UPDATE</button>
+
+    <script>
+        let text = document.querySelector("h1");
+        document.getElementById("btn-one").addEventListener("click", function() {
+            text.innerText = "Brand New Text Added";
+        });
+
+        function backgroundChange() {
+            text.style.backgroundColor = "pink";
+        }
+        document
+            .getElementById("update-btn")
+            .addEventListener("click", function() {
+                let values = document.querySelector("input").value;
+                document.getElementById("text").innerText = values;
+            });
+    </script>
+</body>
+
+</html>
