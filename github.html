@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type of Github</title>
+</head>
+
+<body>
+    <h1 id="title">Explore The Type Of Github</h1>
+    <input id="input-text" type="text" />
+    <button id="btn" disabled>Delete</button>
+    <script>
+        let input_text = document.getElementById("input-text");
+        let btn = document.getElementById("btn");
+        let res = "delete";
+        input_text.addEventListener("keyup", function(event) {
+            let valueRes = event.target.value;
+            if (valueRes === res) {
+                btn.removeAttribute("disabled");
+            } else {
+                btn.setAttribute("disabled", true);
+            }
+        });
+
+        console.log(res);
+    </script>
+</body>
+
+</html>
+
+<!-- https://utweb.trontv.com/gui/index.html?v=1.2.8.4523&localauth=localapi5e956692a225738b:#/library -->
