@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+</head>
+
+<body>
+    <div id="container">
+        <ul id="lists">
+            <li class="list">Item-1</li>
+            <li class="list">Item-2</li>
+            <li class="list">Item-3</li>
+            <li class="list">Item-4</li>
+        </ul>
+        <button id="btn">Add New</button>
+    </div>
+    <script>
+        document
+            .getElementById("btn")
+            .addEventListener("click", function(event) {
+                let container = document.getElementById("container");
+                let items = document.getElementById("lists");
+                let newItem = document.createElement("li");
+                newItem.innerText = "Brand New Item";
+                newItem.setAttribute("class", "list");
+                items.appendChild(newItem);
+            });
+        let items = document.getElementById("lists");
+        items.addEventListener("click", function(event) {
+            event.target.parentNode.removeChild(event.target);
+        });
+    </script>
+</body>
+
+</html>
